@@ -107,24 +107,25 @@
             </div>
             <!-- end signup modal -->
             <!-- Sign in Modal -->
+            <!-- Sign in Modal -->
             <div id="mySignin" class="modal styled hide fade" tabindex="-1" role="dialog" aria-labelledby="mySigninModalLabel" aria-hidden="true">
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                 <h4 id="mySigninModalLabel">Entre em sua<strong> Conta</strong></h4>
               </div>
               <div class="modal-body">
-
-                <form class="form-horizontal">
+                
+                <form class="form-horizontal" action="login.php" method="post">
                   <div class="control-group">
                     <label class="control-label" for="inputText">Email</label>
                     <div class="controls">
-                      <input type="text" id="inputText"  placeholder="Email" >
+                      <input type="text" id="inputText"  name="usuario" placeholder="Email" >
                     </div>
                   </div>
                   <div class="control-group">
                     <label class="control-label" for="inputSigninPassword">Senha</label>
                     <div class="controls">
-                      <input type="password" id="inputSigninPassword"  placeholder="Senha" >
+                      <input type="password" id="inputSigninPassword"  name="senha" placeholder="Senha" >
                     </div>
                   </div>
                   <div class="control-group">
