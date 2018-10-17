@@ -6,17 +6,17 @@
       <!-- Slider -->
       <div id="nivo-slider">
         <div class="nivo-slider">
-          <!-- Slide #1 image -->
-          <img src="..\..\public/img/slides/nivo/bg-1.jpg" alt="" title="#caption-1" />
-          <!-- Slide #2 image -->
+          <!-- Slide 1 imagem -->
+          <img src="img/slides/nivo/bg-1.jpg" alt="" title="#caption-1" />
+          <!-- Slide 2 imagem -->
           <img src="img/slides/nivo/bg-2.jpg" alt="" title="#caption-2" />
-          <!-- Slide #3 image -->
+          <!-- Slide 3 imagem -->
           <img src="img/slides/nivo/bg-3.jpg" alt="" title="#caption-3" />
         </div>
         <div class="container">
           <div class="row">
             <div class="span12">
-              <!-- Slide #1 caption -->
+              <!-- Slide 1 legenda -->
               <div class="nivo-caption" id="caption-1">
                 <div>
                   <h2>Fácil de <strong>economizar</strong></h2>
@@ -27,7 +27,7 @@
                   <a href="#" class="btn btn-theme">Saiba mais</a>
                 </div>
               </div>
-              <!-- Slide #2 caption -->
+              <!-- Slide 2 legenda -->
               <div class="nivo-caption" id="caption-2">
                 <div>
                   <h2>Fácil de <strong>comprar</strong></h2>
@@ -37,7 +37,7 @@
                   <a href="#" class="btn btn-theme">Saiba mais</a>
                 </div>
               </div>
-              <!-- Slide #3 caption -->
+              <!-- Slide 3 legenda -->
               <div class="nivo-caption" id="caption-3">
                 <div>
                   <h2>Fácil de <strong>manusear</strong></h2>
