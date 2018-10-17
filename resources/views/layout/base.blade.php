@@ -223,7 +223,7 @@
         </div>
       </div>
     </header>
-    @yeld('conteudo')
+    @yield('conteudo')
     <footer>
       <div class="container">
         <div class="row">
