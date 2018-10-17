@@ -7,7 +7,7 @@
       <div id="nivo-slider">
         <div class="nivo-slider">
           <!-- Slide #1 image -->
-          <img src="img/slides/nivo/bg-1.jpg" alt="" title="#caption-1" />
+          <img src="..\..\public/img/slides/nivo/bg-1.jpg" alt="" title="#caption-1" />
           <!-- Slide #2 image -->
           <img src="img/slides/nivo/bg-2.jpg" alt="" title="#caption-2" />
           <!-- Slide #3 image -->
