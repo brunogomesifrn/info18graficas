@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('pagina1');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
