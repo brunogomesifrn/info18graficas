@@ -18,3 +18,24 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/autenticacao', function () {
+    return view('login');
+})->name('autenticacao');
+
+
+Route::get('/perfil', function () {
+    return view('perfil');
+})->middleware('auth');
+
+
+Route::get('/cadastro', function () {
+    return view('cadastro_usuario');
+});
+
+Route::get('/desconectar', function () {
+	Auth::logout();
+    return view('pagina1');
+});
+
+

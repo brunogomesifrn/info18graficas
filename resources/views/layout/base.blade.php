@@ -19,15 +19,12 @@
   <!-- Theme skin -->
   <link href="{{asset('skins/default.css')}}" rel="stylesheet" />
   <!-- Fav and touch icons -->
-<<<<<<< HEAD
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{asset('ico/apple-touch-icon-144-precomposed.png')}}" />
+
   <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{asset('ico/apple-touch-icon-114-precomposed.png')}}" />
   <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{asset('ico/apple-touch-icon-72-precomposed.png')}}" />
   <link rel="apple-touch-icon-precomposed" href="{{asset('ico/apple-touch-icon-57-precomposed.png')}}" />
   <link rel="shortcut icon" href="{{asset('ico/favicon.png')}}" />
-=======
 
->>>>>>> c4b85aef3143dfe5436b17bb6a486ca380862013
 
   <!-- =======================================================
     Theme Name: Flattern
@@ -68,8 +65,16 @@
           <div class="span12">
             <div class="headnav">
               <ul>
-                <li><a href="#mySignup" data-toggle="modal"><i class="icon-user"></i> Cadastre-se</a></li>
-                <li><a href="#mySignin" data-toggle="modal"> Entrar</a></li>
+
+                @guest
+                <li><a href="/cadastro" data-toggle="modal"><i class="icon-user"></i> Cadastre-se</a></li>
+                <li><a href="/autenticacao" data-toggle="modal"> Entrar</a></li>
+                @endguest
+
+                @auth
+                  <li><a href="/desconectar" data-toggle="modal"> Logout</a></li>
+                @endauth
+
               </ul>
             </div>
             <!-- Signup Modal -->
