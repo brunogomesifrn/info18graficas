@@ -14,7 +14,15 @@ class CreateGraficaServicosTable extends Migration
     public function up()
     {
         Schema::create('grafica_servicos', function (Blueprint $table) {
-            $table->increments('id');
+            //$table->increments('id');
+
+            $table->integer('servico_id')->unsigned();
+            $table->foreign('servico_id')->references('id')->on('servicos');
+
+            $table->integer('grafica_id')->unsigned();
+            $table->foreign('grafica_id')->references('id')->on('graficas');
+
+            $table->primary(['servico_id', 'grafica_id']);
             $table->timestamps();
         });
     }

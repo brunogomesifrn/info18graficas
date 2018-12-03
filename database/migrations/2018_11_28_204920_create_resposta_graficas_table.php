@@ -14,7 +14,19 @@ class CreateRespostaGraficasTable extends Migration
     public function up()
     {
         Schema::create('resposta_graficas', function (Blueprint $table) {
-            $table->increments('id');
+            //$table->increments('id');
+
+            $table->integer('grafica_id')->unsigned();
+            $table->foreign('grafica_id')->references('id')->on('graficas');
+
+            $table->integer('pedido_id')->unsigned();
+            $table->foreign('pedido_id')->references('id')->on('pedidos');
+
+            $table->double('valor', 6, 2);
+            $table->string('observacao');
+
+            $table->primary(['grafica_id', 'pedido_id']);
+
             $table->timestamps();
         });
     }
