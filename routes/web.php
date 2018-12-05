@@ -39,3 +39,9 @@ Route::get('/desconectar', function () {
 });
 
 
+Route::get('/grafica', 'GraficaControlador@index')->middleware('auth');
+Route::get('/grafica_cadastrar', 'GraficaControlador@create')->middleware('auth');
+Route::post('/grafica_salvar', 'GraficaControlador@store')->middleware('auth');
+Route::get('/grafica_remover/{id}', 'GraficaControlador@destroy')->middleware('auth');
+Route::get('/grafica_editar/{id}', 'GraficaControlador@edit')->middleware('auth');
+Route::post('/grafica_atualizar/{id}', 'GraficaControlador@update')->middleware('auth');
