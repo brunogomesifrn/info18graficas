@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\grafica;
+use App\servico;
 use Auth;
 
 class GraficaControlador extends Controller
@@ -25,8 +26,8 @@ class GraficaControlador extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
-    {
-        return view('grafica_cadastrar');
+    {   $servicos = servico::all();
+        return view('grafica_cadastrar', compact('servicos'));
     }
 
     /**
