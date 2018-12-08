@@ -22,8 +22,9 @@
 	<p>CNPJ: <input type="text" maxlength="14" name="cnpj" value="{{$grafica->cnpj}}"></p>
 	<p>Endereço: <input type="text" name="endereco" value="{{$grafica->endereco}}"></p>
 
-	<input type="hidden" name="id" value="{{$grafica->id}}" >
 
+	<input type="hidden" name="id" value="{{$grafica->id}}" >
+	
 @endif
 	
 	<input type="submit" value="Enviar">

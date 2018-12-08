@@ -89,6 +89,7 @@ class GraficaControlador extends Controller
         $cnpj = $request->input('cnpj');
         $endereco = $request->input('endereco');
         $id = $request->input('id');
+       
 
         $grafica = grafica::find($id);
         $grafica->nome = $nome;
@@ -97,6 +98,7 @@ class GraficaControlador extends Controller
 
        $grafica->save();
 
+ 
        return redirect('/grafica');
     }
 
