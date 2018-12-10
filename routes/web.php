@@ -38,6 +38,20 @@ Route::get('/desconectar', function () {
     return view('pagina1');
 });
 
+Route::get('/pedidos', function () {
+    return view('pedidos');
+})->middleware('auth');
+
+
+Route::get('/perfil', function () {
+    return view('perfil');
+})->middleware('auth');
+
+Route::get('/servicos', function () {
+    return view('servicos');
+})->middleware('auth');
+
+
 
 Route::get('/grafica', 'GraficaControlador@index')->middleware('auth');
 Route::get('/grafica_cadastrar', 'GraficaControlador@create')->middleware('auth');
@@ -45,7 +59,3 @@ Route::post('/grafica_salvar', 'GraficaControlador@store')->middleware('auth');
 Route::get('/grafica_remover/{id}', 'GraficaControlador@destroy')->middleware('auth');
 Route::get('/grafica_editar/{id}', 'GraficaControlador@edit')->middleware('auth');
 Route::post('/grafica_atualizar/{id}', 'GraficaControlador@update')->middleware('auth');
-
-Route::post('/pedidos/{id}', function(){
-	return view('pedidos');
-})->middleware('auth');
