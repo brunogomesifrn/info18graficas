@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\grafica;
+use App\servico;
 use Auth;
 
 class GraficaControlador extends Controller
@@ -25,8 +26,8 @@ class GraficaControlador extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
-    {
-        return view('grafica_cadastrar');
+    {   $servicos = servico::all();
+        return view('grafica_cadastrar', compact('servicos'));
     }
 
     /**
@@ -88,6 +89,7 @@ class GraficaControlador extends Controller
         $cnpj = $request->input('cnpj');
         $endereco = $request->input('endereco');
         $id = $request->input('id');
+       
 
         $grafica = grafica::find($id);
         $grafica->nome = $nome;
@@ -96,6 +98,7 @@ class GraficaControlador extends Controller
 
        $grafica->save();
 
+ 
        return redirect('/grafica');
     }
 

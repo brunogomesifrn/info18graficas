@@ -5,7 +5,7 @@
 <p><a href="/grafica_cadastrar">Cadastrar Gráfica</a></p>
 
 @foreach($graficas as $g)
-<p>{{$g->nome}} | <a href="/grafica_editar/{{$g->id}}">Editar</a> | <a href="/grafica_remover/{{$g->id}}">Remover</a></p>
+<p>{{$g->nome}} | <a href="/grafica_editar/{{$g->id}}"><i class="fa fa-pencil-square-o"></i></a> | <a href="/grafica_remover/{{$g->id}}"><i class="fa fa-trash"></i></a></p>
 @endforeach
 
 @endsection

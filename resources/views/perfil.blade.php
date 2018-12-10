@@ -1,12 +1,11 @@
 @extends('layout.base')
 @section('conteudo')
-<h1>Bem-vindo {{Auth::user()->name}}</h1>
 
+<p><h1>Bem-vindo {{Auth::user()->name}}</h1></p>
 <p><a href="/grafica">Minhas gráficas</a></p>
-<p>Meus Pedidos</p>
+<p><a href="/pedidos">Meus pedidos</a></p>
+<p><a href="/servicos">Serviços</a></p>
 
-
-<p>Serviços</p>
 
 
 @endsection
