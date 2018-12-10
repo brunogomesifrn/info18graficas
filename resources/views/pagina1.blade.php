@@ -62,7 +62,7 @@
                 <h3>Você pode comprar em mais de <span class="highlight"><strong>10 gráficas</strong></span> diferentes</h3>
               </div>
               <div class="cta floatright">
-                <a class="btn btn-large btn-theme btn-rounded" href="#">Solicite seu orçamento</a>
+                <a class="btn btn-large btn-theme btn-rounded" href="/orcamento">Solicite seu orçamento</a>
               </div>
             </div>
           </div>

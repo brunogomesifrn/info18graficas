@@ -51,6 +51,9 @@ Route::get('/servicos', function () {
     return view('servicos');
 })->middleware('auth');
 
+Route::get('/orcamento', function () {
+    return view('orcamento');
+});
 
 
 Route::get('/grafica', 'GraficaControlador@index')->middleware('auth');

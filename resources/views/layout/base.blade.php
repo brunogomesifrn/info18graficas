@@ -190,7 +190,7 @@
         <div class="row">
           <div class="span4">
             <div class="logo">
-              <a href="index.html"><img src="img/logo1.png" alt="" class="logo" /></a>
+              <a href="/"><img src="img/logo1.png" alt="" class="logo" /></a>
               <h1>O jeito fácil de encomendar seu design</h1>
             </div>
           </div>
@@ -199,29 +199,29 @@
               <div class="navigation">
                 <nav>
                   <ul class="nav topnav">
-                    <li class="dropdown active">
-                      <a href="index.html">Home </a>
+                    <li class="dropdown">
+                      <a href="/">Home </a>
                       <!--<ul class="dropdown-menu">
                         <li><a href="index-alt2.html">Graficas</a></li>
 
                       </ul-->
                     </li>
                     <li class="dropdown">
-                      <a href="about.html">Sobre nós </a>
+                      <a href="/perfil">Meu perfil </a>
                     </li>
                     <li class="dropdown">
                       <a href="testimonials.html">O que falam de nós </a>
                     </li>
                     <li class="dropdown">
-                      <a href="#">Portfolio <i class="icon-angle-down"></i></a>
-                      <ul class="dropdown-menu">
+                      <a href="/">Sobre nós </a>
+                      <!--<ul class="dropdown-menu">
                         <li><a href="portfolio-2cols.html">Portfolio 2 columns</a></li>
                         <li><a href="portfolio-3cols.html">Portfolio 3 columns</a></li>
                         <li><a href="portfolio-4cols.html">Portfolio 4 columns</a></li>
                         <li><a href="portfolio-detail.html">Portfolio detail</a></li>
-                      </ul>
+                      </ul>-->
                     </li>
-                    <li class="dropdown">
+                    <!--<li class="dropdown">
                       <a href="#">Blog <i class="icon-angle-down"></i></a>
                       <ul class="dropdown-menu">
                         <li><a href="blog-left-sidebar.html">Blog left sidebar</a></li>
@@ -232,7 +232,7 @@
                     </li>
                     <li>
                       <a href="contact.html">Contato </a>
-                    </li>
+                    </li>-->
                   </ul>
                 </nav>
               </div>
