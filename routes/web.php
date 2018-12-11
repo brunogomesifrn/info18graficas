@@ -11,9 +11,10 @@
 |
 */
 
+/*
 Route::get('/', function () {
     return view('pagina1');
-});
+});*/
 
 Auth::routes();
 
@@ -55,7 +56,7 @@ Route::get('/orcamento', function () {
     return view('orcamento');
 });
 
-
+Route::get('/', 'IndexControlador@index')->middleware('auth');
 Route::get('/grafica', 'GraficaControlador@index')->middleware('auth');
 Route::get('/grafica_cadastrar', 'GraficaControlador@create')->middleware('auth');
 Route::post('/grafica_salvar', 'GraficaControlador@store')->middleware('auth');

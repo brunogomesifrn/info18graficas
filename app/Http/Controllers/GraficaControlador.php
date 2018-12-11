@@ -36,16 +36,28 @@ class GraficaControlador extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+
     public function store(Request $request)
     {
         $nome = $request->input('nome');
         $cnpj = $request->input('cnpj');
         $endereco = $request->input('endereco');
+        $servicos = $request->input('servicos');
+        
+        
+
+        foreach($servicos as $s){
+            $serv = new servico();
+            $serv->nome = $s;
+            $servicos_selecionados[] = $serv; 
+        }
 
        $grafica = new grafica(); 
        $grafica->nome = $nome;
        $grafica->cnpj = $cnpj;
        $grafica->endereco = $endereco;
+       $grafica->servicos = $servicos_selecionados;
+
        $grafica->user_id = Auth::user()->id;
 
        $grafica->save();
@@ -85,16 +97,17 @@ class GraficaControlador extends Controller
      */
     public function update(Request $request, $id)
     {
-         $nome = $request->input('nome');
+        $nome = $request->input('nome');
         $cnpj = $request->input('cnpj');
         $endereco = $request->input('endereco');
-        $id = $request->input('id');
-       
+        
+        $servicos = $request->input('servicos');
 
         $grafica = grafica::find($id);
         $grafica->nome = $nome;
        $grafica->cnpj = $cnpj;
        $grafica->endereco = $endereco;
+       $grafica->servicos = $servicos;
 
        $grafica->save();
 

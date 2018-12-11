@@ -11,7 +11,7 @@
 	
 	<p>Serviços:</p>
 	@foreach($servicos as $s)
-	<p><input type="checkbox" name="servico" value="{{$s->id}}">{{$s->nome}}</p>
+	<p><input type="checkbox" name="servicos[]" value="{{$s->id}}">{{$s->nome}}</p>
 	@endforeach
 
 </p>
