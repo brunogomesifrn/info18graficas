@@ -1,4 +1,5 @@
 @extends('layout.base')
+
 @section('conteudo')
 <h1>Cadastrar Gráfica</h1>
 
@@ -21,6 +22,20 @@
 	<p>Nome: <input type="text" name="nome" value="{{$grafica->nome}}"></p>
 	<p>CNPJ: <input type="text" maxlength="14" name="cnpj" value="{{$grafica->cnpj}}"></p>
 	<p>Endereço: <input type="text" name="endereco" value="{{$grafica->endereco}}"></p>
+
+<p>Serviços:</p>
+	@foreach($servicos as $s)
+	<p><input type="checkbox" name="servicos[]" value="{{$s->id}}"
+
+		@foreach($grafica->servicos as $selecionado)
+			@if($selecionado->id == $s->id)
+			checked
+			@endif
+		@endforeach
+
+		>{{$s->nome}}</p>
+	@endforeach
+
 
 
 	<input type="hidden" name="id" value="{{$grafica->id}}" >

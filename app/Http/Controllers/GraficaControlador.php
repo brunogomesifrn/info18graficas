@@ -43,25 +43,17 @@ class GraficaControlador extends Controller
         $cnpj = $request->input('cnpj');
         $endereco = $request->input('endereco');
         $servicos = $request->input('servicos');
-        
-        
-
-        foreach($servicos as $s){
-            $serv = new servico();
-            $serv->nome = $s;
-            $servicos_selecionados[] = $serv; 
-        }
 
        $grafica = new grafica(); 
        $grafica->nome = $nome;
        $grafica->cnpj = $cnpj;
        $grafica->endereco = $endereco;
-       $grafica->servicos = $servicos_selecionados;
+       
 
        $grafica->user_id = Auth::user()->id;
 
        $grafica->save();
-
+       $grafica->servicos()->sync($servicos);
        return redirect('/grafica');
     }
 
@@ -73,7 +65,8 @@ class GraficaControlador extends Controller
      */
     public function show($id)
     {
-        //
+        $grafica = grafica::find($id);
+        return view('/grafica_detalhes', compact('grafica'));
     }
 
     /**
@@ -85,7 +78,8 @@ class GraficaControlador extends Controller
     public function edit($id)
     {
         $grafica = grafica::find($id);
-        return view('/grafica_cadastrar', compact('grafica'));
+        $servicos = servico::all();
+        return view('/grafica_cadastrar', compact('grafica', 'servicos'));
     }
 
     /**
@@ -107,9 +101,10 @@ class GraficaControlador extends Controller
         $grafica->nome = $nome;
        $grafica->cnpj = $cnpj;
        $grafica->endereco = $endereco;
-       $grafica->servicos = $servicos;
+
 
        $grafica->save();
+       $grafica->servicos()->sync($servicos);
 
  
        return redirect('/grafica');
