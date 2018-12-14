@@ -64,9 +64,9 @@ class GraficaControlador extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show($id)
-    {
+    {   $servicos = servico::find($id);
         $grafica = grafica::find($id);
-        return view('/grafica_detalhes', compact('grafica'));
+        return view('/grafica_detalhes', compact('grafica', 'servicos'));
     }
 
     /**

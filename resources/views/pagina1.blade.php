@@ -1,5 +1,7 @@
 @extends('layout.base')
 @section('conteudo')
+
+
     <!-- end header -->
     <section id="featured">
       <!-- start slider -->
@@ -148,7 +150,7 @@
             <div class="row">
               
                 @foreach($graficas as $g)
-                <p><h3><a href="/grafica_editar/{{$g->id}}">{{$g->nome}}</a></h3></p>
+                <p><h3><a href="/grafica_mostrar/{{$g->id}}">{{$g->nome}}</a></h3></p>
                 @endforeach
                 <p><a href="/perfil"> Voltar</a><h3></p>
            
