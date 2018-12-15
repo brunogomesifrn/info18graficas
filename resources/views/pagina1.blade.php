@@ -152,7 +152,7 @@
                 @foreach($graficas as $g)
                 <p><h3><a href="/grafica_mostrar/{{$g->id}}">{{$g->nome}}</a></h3></p>
                 @endforeach
-                <p><a href="/perfil"> Voltar</a><h3></p>
+                <!--<p><a href="/perfil"> Voltar</a><h3></p>-->
            
               
             </div>
