@@ -32,13 +32,12 @@
 </div>
 </div>
 
-@auth
-<div class="container">
+<!--<div class="container">
         <div class="row">
           <div class="span12">
             <h4>Entre em contato conosco preenchendo o <strong>formulário de pedido</strong> abaixo</h4>
 
-            <form action="" method="post" role="form" class="contactForm">
+            <form action="/fazer_pedido/" method="post" role="form" class="contactForm">
               <div id="sendmessage">Sua mensagem foi enviada. Obrigado!</div>
               <div id="errormessage"></div>
 
@@ -67,7 +66,7 @@
           </div>
         </div>
       </div>
-      @endauth
+      @endauth-->
 
 @guest
 <p>Faça a autenticação para solicitar orçamentos! <a href="/cadastro">Cadastrar</a> <a href="/autenticacao"> Login</a></p>	

@@ -122,4 +122,24 @@ class GraficaControlador extends Controller
         $grafica->delete();
         return redirect('/grafica');
     }
+
+     public function fazer_pedido(Request $request)
+    {
+       $pedido = new Pedido();
+       $pedido->$descricao = $request->input('descricao');
+       $pedido->$servico_id = $request->input('servico');
+       $pedido->$data = date();
+       $pedido->user_id = Auth::user()->id;
+
+       $pedido->save();
+       $grafica->servicos()->sync($servicos);
+       return redirect('/meus_pedidos');
+      
+    }
+
+    public function meus_pedidos(){
+        $servicos = servico::all();
+        return view('/orcamento', compact('servicos'));
+    }
+
 }

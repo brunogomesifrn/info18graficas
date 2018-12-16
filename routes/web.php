@@ -64,3 +64,5 @@ Route::get('/grafica_remover/{id}', 'GraficaControlador@destroy')->middleware('a
 Route::get('/grafica_editar/{id}', 'GraficaControlador@edit')->middleware('auth');
 Route::post('/grafica_atualizar/{id}', 'GraficaControlador@update')->middleware('auth');
 Route::get('/grafica_mostrar/{id}', 'GraficaControlador@show');
+Route::post('/fazer_pedido', 'GraficaControlador@fazer_pedido')->middleware('auth');
+Route::post('/meus_pedidos', 'GraficaControlador@meus_pedidos')->middleware('auth');
