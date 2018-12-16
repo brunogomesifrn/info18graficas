@@ -52,9 +52,7 @@ Route::get('/servicos', function () {
     return view('servicos');
 })->middleware('auth');
 
-Route::get('/orcamento', function () {
-    return view('orcamento');
-});
+
 
 Route::get('/', 'IndexControlador@index');
 Route::get('/grafica', 'GraficaControlador@index')->middleware('auth');
@@ -66,3 +64,4 @@ Route::post('/grafica_atualizar/{id}', 'GraficaControlador@update')->middleware(
 Route::get('/grafica_mostrar/{id}', 'GraficaControlador@show');
 Route::post('/fazer_pedido', 'GraficaControlador@fazer_pedido')->middleware('auth');
 Route::post('/meus_pedidos', 'GraficaControlador@meus_pedidos')->middleware('auth');
+Route::get('/orcamento', 'GraficaControlador@meus_pedidos')->middleware('auth');

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\grafica;
 use App\servico;
+use App\pedido;
 use Auth;
 
 class GraficaControlador extends Controller
