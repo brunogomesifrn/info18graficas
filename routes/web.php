@@ -36,7 +36,7 @@ Route::get('/cadastro', function () {
 
 Route::get('/desconectar', function () {
 	Auth::logout();
-    return view('pagina1');
+    return redirect('/');
 });
 
 Route::get('/pedidos', function () {

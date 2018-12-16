@@ -31,6 +31,8 @@
 </table>
 </div>
 </div>
+
+@auth
 <div class="container">
         <div class="row">
           <div class="span12">
@@ -65,7 +67,12 @@
           </div>
         </div>
       </div>
+      @endauth
 
+@guest
+<p>Faça a autenticação para solicitar orçamentos! <a href="/cadastro_usuario">Cadastrar</a> <a href="/autenticacao"> Login</a></p>	
+@endguest
+}
 
 <!--<p>{{$grafica->nome}}</p>
 <p><h3>{{$grafica->endereco}}</h3></p>
