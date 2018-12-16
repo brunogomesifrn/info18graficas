@@ -11,11 +11,7 @@
                 <div class="span12 margintop10 form-group">
                   <p>Faça a descrição do seu pedido:</p>
                   <textarea class="form-control" name="message" rows="12" data-rule="required" data-msg="Please write something for us" placeholder="mensagem"></textarea>
-                  <div class="validation"></div>
-                  <p class="text-center">
-                    <button class="btn btn-large btn-theme margintop10" type="submit">Enviar mensagem</button>
-                  </p>
-                </div>
+                 
               </div>
                 <div class="row">
                 @foreach($servicos as $s)
@@ -25,5 +21,10 @@
                 <input type="radio" name="servicos[]" value="{{$s->id}}"/>{{$s->nome}}
                 @endforeach
               </div>
+               <div class="validation"></div>
+                  <p class="text-center">
+                    <button class="btn btn-large btn-theme margintop10" type="submit">Enviar mensagem</button>
+                  </p>
+                </div>
             </form>
 @endsection

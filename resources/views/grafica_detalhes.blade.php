@@ -69,7 +69,7 @@
       @endauth-->
 
 @guest
-<p>Faça a autenticação para solicitar orçamentos! <a href="/cadastro">Cadastrar</a> <a href="/autenticacao"> Login</a></p>	
+<p><a href="/orcamento">Faça seu pedido!</a> <a href="/cadastro">Cadastrar</a> <a href="/autenticacao"> Login</a></p>	
 @endguest
 
 
