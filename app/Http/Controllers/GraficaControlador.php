@@ -134,13 +134,17 @@ class GraficaControlador extends Controller
 
        $pedido->save();
        $grafica->servicos()->sync($servicos);
-       return redirect('/meus_pedidos');
+       return redirect('/pedidos');
       
     }
 
-    public function meus_pedidos(){
+    public function fazer_orcamento(){
         $servicos = servico::all();
         return view('/orcamento', compact('servicos'));
     }
 
+    public function meus_pedidos(){
+        $pedidos = pedido::all();
+        return view('/pedidos', compact('pedidos'));
+    }
 }

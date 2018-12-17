@@ -7,7 +7,7 @@
               
                 <div class="span8 margintop8 form-group">
                   <p>Faça a descrição do seu pedido:</p>
-                  <textarea class="form-control" name="message" rows="12" data-rule="required" data-msg="Please write something for us" placeholder="mensagem"></textarea>
+                  <textarea class="form-control" name="descricao" rows="12" data-rule="required" data-msg="Please write something for us" placeholder="mensagem"></textarea>
                 </div>
 <br/>
                 <div class="row">
