@@ -34,7 +34,7 @@
                 <div>
                   <h2>Fácil de <strong>comprar</strong></h2>
                   <p>
-                    A EasyGráfica deixa processo de encomenda e compra ficam mais fáceis, com alguns cliks você pode fazer uma revolução visual
+                    A EasyGráfica deixa o processo de encomenda e compra mais fácil, com alguns cliks você pode fazer uma revolução visual
                   </p>
                   <a href="#" class="btn btn-theme">Saiba mais</a>
                 </div>
