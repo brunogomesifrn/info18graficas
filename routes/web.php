@@ -40,10 +40,6 @@ Route::get('/desconectar', function () {
 });
 
 
-Route::get('/perfil', function () {
-    return view('perfil');
-})->middleware('auth');
-
 Route::get('/servicos', function () {
     return view('servicos');
 })->middleware('auth');
