@@ -11,7 +11,7 @@
 
   <!-- css -->
   <link href="https://fonts.googleapis.com/css?family=Noto+Serif:400,400italic,700|Open+Sans:300,400,600,700" rel="stylesheet">
-  <link href="{{asset('/css/bootstrap.css')}}" rel="stylesheet" />
+  <link href="{{asset('css/bootstrap.css')}}" rel="stylesheet" />
   <link href="{{asset('css/bootstrap-responsive.css')}}" rel="stylesheet" />
   <link href="{{asset('css/fancybox/jquery.fancybox.css')}}" rel="stylesheet">
   <link href="{{asset('css/jcarousel.css')}}" rel="stylesheet" />

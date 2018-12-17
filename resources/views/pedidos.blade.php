@@ -1,7 +1,7 @@
 @extends('layout.base')
 @section('conteudo')
 <h3>Meus pedidos</h3>
-@foreach($pedidos as p)
+@foreach($pedidos as $p)
 <h6>Pedido: {{$p->descricao}}</h6>
 <p>Serviço:</p>
 <h6>{{$p->servico}}</h6>
