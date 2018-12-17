@@ -127,13 +127,13 @@ class GraficaControlador extends Controller
      public function fazer_pedido(Request $request)
     {
        $pedido = new Pedido();
-       $pedido->$descricao = $request->input('descricao');
-       $pedido->$servico_id = $request->input('servico');
-       $pedido->$data = date();
+       $pedido->descricao = $request->input('descricao');
+       $pedido->servico_id = $request->input('servico');
+       $pedido->data = date("Y-m-d");
        $pedido->user_id = Auth::user()->id;
 
        $pedido->save();
-       $grafica->servicos()->sync($servicos);
+       
        return redirect('/pedidos');
       
     }
@@ -145,6 +145,6 @@ class GraficaControlador extends Controller
 
     public function meus_pedidos(){
         $pedidos = pedido::all();
-        return view('/pedidos', compact('pedidos'));
+        return view('pedidos', compact('pedidos'));
     }
 }

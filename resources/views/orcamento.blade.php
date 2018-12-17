@@ -1,6 +1,7 @@
 @extends('layout.base')
 @section('conteudo')
 			<form action="/fazer_pedido" method="post" role="form" class="contactForm">
+        @csrf
               <div id="sendmessage">Sua mensagem foi enviada. Obrigado!</div>
               <div id="errormessage"></div>
 
@@ -14,7 +15,7 @@
                   <p>Serviços:</p>
                 @foreach($servicos as $s)
                 
-                <input type="radio" name="servicos[]" value="{{$s->id}}"/> {{$s->nome}}<br />
+                <input type="radio" name="servico" value="{{$s->id}}"/> {{$s->nome}}<br />
                 <!--<input type="radio" name="servicos[]" value="{{$s->id}}"/> {{$s->nome}}<br />
                 <input type="radio" name="servicos[]" value="{{$s->id}}"/>{{$s->nome}}<br />
                 <input type="radio" name="servicos[]" value="{{$s->id}}"/>{{$s->nome}}-->

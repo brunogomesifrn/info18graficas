@@ -1,9 +1,11 @@
 @extends('layout.base')
 @section('conteudo')
 <h3>Meus pedidos</h3>
-
-<h6>{{$pedidos->descricao}}</h6>
-<h6>{{$pedidos->servicos}}</h6>
-
+@foreach($pedidos as p)
+<h6>Pedido: {{$p->descricao}}</h6>
+<p>Serviço:</p>
+<h6>{{$p->servico}}</h6>
+<h6>Data: {{$p->data}}</h6>
+@endforeach
 
 @endsection

@@ -39,10 +39,6 @@ Route::get('/desconectar', function () {
     return redirect('/');
 });
 
-Route::get('/pedidos', function () {
-    return view('pedidos');
-})->middleware('auth');
-
 
 Route::get('/perfil', function () {
     return view('perfil');
